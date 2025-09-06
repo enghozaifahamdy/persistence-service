@@ -12,11 +12,14 @@ public class TradeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "event_type")
-    private String eventType;
+    @ManyToOne(optional = false)
+    @javax.persistence.JoinColumn(name = "event_type_id", nullable = false)
+    private EventTypeEntity eventType;
     @Column(name = "event_timestamp")
     private Long eventTimestamp;
-    private String symbol;
+    @ManyToOne(optional = false)
+    @javax.persistence.JoinColumn(name = "symbol_id", nullable = false)
+    private SymbolEntity symbol;
     @Column(name = "trade_id")
     private Long tradeId;
     private String price;

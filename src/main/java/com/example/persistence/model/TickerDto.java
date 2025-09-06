@@ -5,7 +5,6 @@ import lombok.Data;
 @Data
 
 public class TickerDto extends BaseDto {
-    private Long tickerId;
     private String priceChange;
     private String priceChangePercent;
     private String weightedAveragePrice;

@@ -12,7 +12,4 @@ import java.util.Optional;
 @Repository
 public interface TradeRepository extends JpaRepository<TradeEntity, Long> {
 
-    Page<TradeEntity> findBySymbol(String symbol, Pageable pageable);
-
-    Optional<TradeEntity> findByTradeId(Long tradeId);
 }

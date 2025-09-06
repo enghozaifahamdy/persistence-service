@@ -10,11 +10,19 @@ import org.mapstruct.*;
 
 @Mapper(componentModel = "spring")
 public interface PayloadMapper {
+    @Mapping(target = "eventType", ignore = true)
+    @Mapping(target = "symbol", ignore = true)
     TradeEntity toTradeEntity(TradeDto dto);
 
+    @Mapping(target = "eventType", ignore = true)
+    @Mapping(target = "symbol", ignore = true)
     TradeDto toTradeDto(TradeEntity entity);
 
+    @Mapping(target = "eventType", ignore = true)
+    @Mapping(target = "symbol", ignore = true)
     TickerEntity toTickerEntity(TickerDto dto);
 
+    @Mapping(target = "eventType", ignore = true)
+    @Mapping(target = "symbol", ignore = true)
     TickerDto toTickerDto(TickerEntity entity);
 }

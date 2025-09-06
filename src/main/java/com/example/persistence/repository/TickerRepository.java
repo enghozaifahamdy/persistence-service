@@ -8,7 +8,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TickerRepository extends JpaRepository<TickerEntity, Long> {
-    Page<TickerEntity> findBySymbol(String symbol, Pageable pageable);
-    Page<TickerEntity> findByFirstTradeId(Long tradeId, Pageable pageable);
-    Page<TickerEntity> findByLastTradeId(Long tradeId, Pageable pageable);
 }
