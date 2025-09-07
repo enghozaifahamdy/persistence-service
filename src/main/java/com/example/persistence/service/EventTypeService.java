@@ -12,7 +12,7 @@ public class EventTypeService {
 
     private final EventTypeRepository eventTypeRepository;
 
-    EventTypeEntity findOrCreate(String eventType) {
+    public EventTypeEntity findOrCreate(String eventType) {
 
         return eventTypeRepository.findByType(eventType)
                 .orElseGet(() -> eventTypeRepository.save(new EventTypeEntity(eventType)));
